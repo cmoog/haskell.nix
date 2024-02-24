@@ -41,7 +41,7 @@ let
       # There is no binary for aarch64-linux ghc 8.8.4 so don't warn about 8.8.3 not being the latest version
       else if x.src-spec.version == "8.8.3" && (final.stdenv.targetPlatform.isAarch64 || final.stdenv.buildPlatform.isAarch64)
         then x
-      else if builtins.compareVersions x.src-spec.version latestVer.${v} < 0
+      else if false
         then builtins.trace
           "WARNING: ${x.src-spec.version} is out of date, consider using ${latestVer.${v}}." x
       else x;

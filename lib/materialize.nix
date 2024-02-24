@@ -37,7 +37,7 @@ let
       else x;
 
   traceWhenChecking = message: x:
-    if checkMaterialization
+    if false
       then builtins.trace message x
       else x;
 
