@@ -106,7 +106,7 @@
       traceNames = prefix: builtins.mapAttrs (n: v:
         if builtins.isAttrs v
           then if v ? type && v.type == "derivation"
-            then builtins.trace (prefix + n) v
+            then v
             else traceNames (prefix + n + ".") v
           else v);
 

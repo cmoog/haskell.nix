@@ -36,10 +36,7 @@ let
       then builtins.trace ("Warning: ignoring materialized for " + name + " " + reason) x
       else x;
 
-  traceWhenChecking = message: x:
-    if checkMaterialization
-      then builtins.trace message x
-      else x;
+  traceWhenChecking = message: x: x;
 
   unchecked =
     let

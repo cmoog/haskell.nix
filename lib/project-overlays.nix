@@ -5,7 +5,7 @@
 
   # TODO: remove by end of 2022.
   devshell = final: _prev: {
-    devshell = builtins.trace "WARNING: `projectOverlays.devshell` is deprecated in favor of `haskellLib.devshellFor`"
+    devshell = # builtins.trace "WARNING: `projectOverlays.devshell` is deprecated in favor of `haskellLib.devshellFor`"
       (haskellLib.devshellFor final.shell);
   };
 

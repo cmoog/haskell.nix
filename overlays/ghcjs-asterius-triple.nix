@@ -22,8 +22,8 @@ final: prev: prev.lib.recursiveUpdate prev {
         cpuTypes.js = cpuTypes.wasm32 // { name = "js"; family = "js"; };
         kernels.ghcjs = kernels.none // { name = "ghcjs"; };
         kernels.asterius = kernels.none // { name = "asterius"; };
-        mkSkeletonFromList = l: builtins.trace l (prev.lib.systems.parse.mkSkeletonFromList l);
-        mkSystemFromString = s: builtins.trace s (prev.lib.systems.parse.mkSystemFromString s);
+        mkSkeletonFromList = l: (prev.lib.systems.parse.mkSkeletonFromList l);
+        mkSystemFromString = s: (prev.lib.systems.parse.mkSystemFromString s);
     };
     lib.systems.inspect.patterns = with final.lib.systems.parse; {
         isJavaScript = { cpu = cpuTypes.js; };
