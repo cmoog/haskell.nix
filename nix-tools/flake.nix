@@ -3,7 +3,7 @@
     nixpkgs.follows = "haskellNix/nixpkgs";
     # nixpkgs-unstable.url = "github:NixOS/nixpkgs";
 
-    haskellNix.url = "github:input-output-hk/haskell.nix";
+    haskellNix.url = "github:cmoog/haskell.nix/2024-05-notrace";
   };
 
   
