@@ -223,7 +223,7 @@ packages2nix args pkgs =
 
 defaultNixContents :: String
 defaultNixContents = unlines
-  [ "{ haskellNixSrc ? builtins.fetchTarball https://github.com/input-output-hk/haskell.nix/archive/master.tar.gz"
+  [ "{ haskellNixSrc ? builtins.fetchTarball https://github.com/cmoog/haskell.nix/archive/fd5e329cfbad5c0040209079492c8d8a7144e43b.tar.gz"
   , "}:"
   , ""
   , "let"
